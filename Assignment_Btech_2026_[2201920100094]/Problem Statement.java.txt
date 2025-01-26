@@ -1,0 +1,29 @@
+Problem Statement:
+Write the following code in your editor below:
+
+1-A class named Arithmetic with a method named add that takes  integers as parameters and returns an integer denoting their sum.
+2-A class named Adder that inherits from a superclass named Arithmetic.
+Your classes should not be be public.
+
+Input Format:
+
+You are not responsible for reading any input from stdin; a locked code stub will test your submission by calling the add method on an Adder object and passing it  integer parameters.
+Coding platform used:
+"HackerRank".
+Approach:
+1-create a Base Class (Arithmetic):
+
+This class should have a method add(int a, int b) that takes two integers as input and returns their sum.
+2-Create a Subclass (Adder):
+
+The Adder class will inherit from the Arithmetic class.
+3-Main Class (Solution):
+
+This is where the test code is written to instantiate the Adder class and use its add method.
+Steps to Solve:
+1Define the Arithmetic class:
+Write a method add(int a, int b) that computes and returns the sum of the two integers.
+2-Define the Adder class:
+Use the extends keyword to inherit from Arithmetic.
+3-Write the Solution class:
+Create an object of the Adder class.
