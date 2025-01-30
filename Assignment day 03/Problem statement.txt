@@ -1,0 +1,44 @@
+Problem statement:
+--A class defines a blueprint for an object. We use the same syntax to declare objects of a class as we use to declare variables of other basic types. For example:
+
+Box box1;          // Declares variable box1 of type Box
+Box box2;          // Declare variable box2 of type Box
+Kristen is a contender for valedictorian of her high school. She wants to know how many students (if any) have scored higher than her in the  exams given during this semester.
+
+Create a class named  Students with the following specifications:
+
+--An instance variable named scores to hold a student's  exam scores.
+--A void input() function that reads 5 integers and saves them to scores .
+--An int calculateTotalScore() function that returns the sum of the student's scores.
+Input Format
+--Most of the input is handled for you by the locked code in the editor.
+In the void Student::input() function, you must read 5 scores from stdin and save them to your score instance variable.
+
+Output Format
+--In the int Student::calculateTotalScore() function, you must return the student's total grade (the sum of the values score in ).
+--The locked code in the editor will determine how many scores are larger than Kristen's and print that number to the console.
+
+Platform Used:
+--HackerRank
+
+Approach:
+Step 1: Understanding the Problem
+Each student has 5 test scores.
+We need to:
+--Read and store the scores.
+--Compute the total score for each student.
+Step 2: Implementing the Solution
+1.Create a Student class with:
+--A private array scores[5] to store the scores.
+--A public method input() to read 5 scores.
+--A public method calculateTotalScore() to compute and return the total score.
+
+2.Read input:
+--First, take an integer N (number of students).
+--Create an array/vector of Student objects.
+--Use the input() method to store scores.
+
+3.Calculate and Compare Scores:
+--Compute the total score for the first student (Kristen in the problem).
+--Compare Kristen’s score with the rest of the students.
+--Count how many students scored higher.
