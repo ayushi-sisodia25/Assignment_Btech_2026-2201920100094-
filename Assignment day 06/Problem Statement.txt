@@ -1,0 +1,68 @@
+Problem Statement:
+Design a class named Box whose dimensions are integers and private to the class. The dimensions are labelled: length l, breadth b, and height h.
+
+The default constructor of the class should initialize l, b,h and  to 0 .
+
+The parameterized constructor Box(int length, int breadth, int height) should initialize Box's l, b and h to length, breadth and height.
+
+The copy constructor Box(Box B) should set l, b and h to B's  and h, respectively.
+
+Apart from the above, the class should have  functions:
+
+--int getLength() - Return box's length
+--int getBreadth() - Return box's breadth
+--int getHeight() - Return box's height
+--long long CalculateVolume() - Return the volume of the box
+For example,
+
+Box b1; // Should set b1.l = b1.b = b1.h = 0;
+Box b2(2, 3, 4); // Should set b1.l = 2, b1.b = 3, b1.h = 4;
+b2.getLength();	// Should return 2
+b2.getBreadth(); // Should return 3
+b2.getheight();	// Should return 4
+b2.CalculateVolume(); // Should return 24
+bool x = (b1 < b2);	// Should return true based on the conditions given
+cout<<b2; // Should print 2 3 4 in order.
+
+Platform Used:
+HackerRank
+
+Approach:
+1. Identify Class Attributes
+The class represents a box with three integer dimensions:
+
+--l: length
+--b: breadth
+--h: height
+Since these attributes are internal to the class (private), we must provide getter functions to access them.
+
+2. Define Constructors
+We need three constructors:
+
+1:Default Constructor (Box())
+--Initializes length, breadth, and height to 0.
+2:Parameterized Constructor (Box(int, int, int))
+--Initializes l, b, h with user-provided values.
+3:Copy Constructor (Box(const Box&))
+--Copies values from an existing Box object.
+--The parameter should be passed as const Box& to avoid modifying the original object.
+3. Implement Getter Methods
+4. Implement CalculateVolume()
+We calculate volume as:
+
+Volume
+=
+length
+×
+breadth
+×
+height
+Volume=length×breadth×height
+We use static_cast<long long> to prevent integer overflow.
+5. Overload the < Operator
+The < operator should compare boxes based on their dimensions:
+
+A box is considered smaller than another if:
+Its length is smaller.
+If lengths are equal, check breadth.
+If both length and breadth are equal, check height.
