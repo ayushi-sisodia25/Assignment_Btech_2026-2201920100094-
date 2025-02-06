@@ -1,0 +1,52 @@
+Solution:
+#include <iostream>
+
+using namespace std;
+class Rectangle {
+    public:
+        int width;    // Represents the width of the rectangle
+        int height;   // Represents the height of the rectangle
+
+        // Virtual function for displaying rectangle properties
+        virtual void display() {
+            cout << width << " " << height << endl; 
+        }
+};
+
+class RectangleArea : public Rectangle { 
+    public:
+        void read_input() { 
+            cin >> width; // Reads the width from the user input
+            cin >> height; // Reads the height from the user input
+        }
+
+        // Overrides the display() method from the base class
+        void display() override { 
+            cout << width * height << endl; // Displays the area of the rectangle 
+        }
+};
+
+int main()
+{
+    /*
+     * Declare a RectangleArea object
+     */
+    RectangleArea r_area;
+    
+    /*
+     * Read the width and height
+     */
+    r_area.read_input();
+    
+    /*
+     * Print the width and height
+     */
+    r_area.Rectangle::display();
+    
+    /*
+     * Print the area
+     */
+    r_area.display();
+    
+    return 0;
+}
